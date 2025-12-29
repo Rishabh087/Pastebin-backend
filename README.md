@@ -55,7 +55,7 @@ A lightweight Pastebin-like backend service built using Node.js and Express. It 
 
 Response (201 Created):
 
-JSON
+```JSON
 
 {
   "id": "AbC123xY",
