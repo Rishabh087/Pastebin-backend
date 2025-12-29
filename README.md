@@ -52,46 +52,48 @@ A lightweight Pastebin-like backend service built using Node.js and Express. It 
   "ttl_seconds": 120,
   "max_views": 5
 }
+```
 
-Response (201 Created):
+**Response (201 Created):**
 
-JSON
-
+```json
 {
   "id": "AbC123xY",
   "url": "[https://pastebin-backend-5x8f.onrender.com/p/AbC123xY](https://pastebin-backend-5x8f.onrender.com/p/AbC123xY)"
 }
+```
 
-
-3. Fetch Paste (JSON)
+### 3. Fetch Paste (JSON)
 GET /api/pastes/:id
 
 Response:
 
-JSON
+```json
 
 {
   "content": "Hello World",
   "remaining_views": 4,
   "expires_at": "2026-01-01T12:00:00.000Z"
 }
-
+```
 Note: Returns 404 Not Found if the paste is expired, reached max views, or doesn't exist.
-4. View Paste (HTML)
-GET /p/:id
+
+### 4. View Paste (HTML)
+`GET /p/:id`
 
 Displays paste content safely rendered inside an HTML <pre> block.
 
-⚙️ Environment Variables
+
+### ⚙️ Environment Variables
 To run this project locally, create a .env file in the root directory:
 PORT=8080
 MONGO_URI=<Your MongoDB Atlas Connection String>
 BASE_URL=http://localhost:8080
 TEST_MODE=0
 
-🧪 Installation & Testing
+### 🧪 Installation & Testing
 Clone the repository:
-git clone <your-repo-link>
+git clone <>
 cd pastebin-lite-backend
 
 Install dependencies:
@@ -99,9 +101,9 @@ npm install
 Start the server:
 npm start
 
-🔐 Security
+### 🔐 Security
 XSS Prevention: User content is HTML-escaped before rendering to prevent malicious script injection.
 Validation: Basic validation on input fields to ensure ttl_seconds and max_views are numbers.
 
-👨‍💻 Author
+### 👨‍💻 Author
 Rishabh Pandey
