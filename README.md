@@ -93,7 +93,7 @@ TEST_MODE=0
 
 ### 🧪 Installation & Testing
 Clone the repository:
-git clone <>
+git clone <https://github.com/Rishabh087/Pastebin-backend>
 cd pastebin-lite-backend
 
 Install dependencies:
